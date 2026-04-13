@@ -8,9 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Estilos refatorados com BEM: blocos/elementos/modificadores em estilos.css -->
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body class="pagina">
   <header class="cabecalho">
     <div class="container cabecalho__conteudo">
       <a class="logo" href="#home" aria-label="Página inicial da Agência Criativa Web">
@@ -18,20 +19,20 @@
         <span class="logo__texto">Agência Criativa Web</span>
       </a>
 
-      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Abrir menu de navegação">
-      <label class="menu-botao" for="menu-toggle" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
+      <input class="cabecalho__menu-toggle" type="checkbox" id="menu-toggle" aria-label="Abrir menu de navegação">
+      <label class="cabecalho__menu-btn" for="menu-toggle" aria-hidden="true">
+        <span class="cabecalho__menu-bar"></span>
+        <span class="cabecalho__menu-bar"></span>
+        <span class="cabecalho__menu-bar"></span>
       </label>
 
       <nav class="navegacao" aria-label="Menu principal">
         <ul class="navegacao__lista">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a class="navegacao__link" href="#home">Home</a></li>
+          <li><a class="navegacao__link" href="#sobre">Sobre Nós</a></li>
+          <li><a class="navegacao__link" href="#servicos">Serviços</a></li>
+          <li><a class="navegacao__link" href="#depoimentos">Depoimentos</a></li>
+          <li><a class="navegacao__link" href="#contato">Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -40,8 +41,8 @@
   <main>
     <section id="home" class="banner">
       <div class="container banner__conteudo">
-        <p class="tag">Design digital com estratégia</p>
-        <h1>Transformamos ideias em experiências digitais memoráveis.</h1>
+        <p class="banner__tag">Design digital com estratégia</p>
+        <h1 class="banner__titulo">Transformamos ideias em experiências digitais memoráveis.</h1>
         <p class="banner__texto">
           Na Agência Criativa Web, unimos criatividade, tecnologia e foco em resultado para impulsionar marcas no ambiente online.
         </p>
@@ -51,12 +52,12 @@
 
     <section id="sobre" class="secao">
       <div class="container sobre">
-        <div>
-          <h2>Sobre Nós</h2>
-          <p>
+        <div class="sobre__coluna">
+          <h2 class="secao__titulo">Sobre Nós</h2>
+          <p class="sobre__texto">
             Somos uma agência de design digital especializada em criar soluções visuais e funcionais para empresas que desejam se destacar.
           </p>
-          <p>
+          <p class="sobre__texto">
             Valorizamos inovação, colaboração, transparência e excelência em cada projeto, do conceito à entrega.
           </p>
         </div>
@@ -68,6 +69,7 @@
               https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80 1200w"
             sizes="(max-width: 56.25rem) 100vw, 40vw">
           <img
+            class="sobre__foto"
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
             alt="Equipe de design em reunião criativa">
         </picture>
@@ -76,23 +78,23 @@
 
     <section id="servicos" class="secao secao--cinza">
       <div class="container">
-        <h2>Serviços</h2>
-        <div class="servicos-grid">
-          <article class="servico-card">
-            <h3>Design Gráfico</h3>
-            <p>Criação de peças visuais impactantes para mídias digitais e impressas.</p>
+        <h2 class="secao__titulo">Serviços</h2>
+        <div class="servicos">
+          <article class="servico">
+            <h3 class="servico__titulo">Design Gráfico</h3>
+            <p class="servico__descricao">Criação de peças visuais impactantes para mídias digitais e impressas.</p>
           </article>
-          <article class="servico-card">
-            <h3>Desenvolvimento Web</h3>
-            <p>Sites modernos, rápidos e responsivos com foco em performance e conversão.</p>
+          <article class="servico">
+            <h3 class="servico__titulo">Desenvolvimento Web</h3>
+            <p class="servico__descricao">Sites modernos, rápidos e responsivos com foco em performance e conversão.</p>
           </article>
-          <article class="servico-card">
-            <h3>Branding</h3>
-            <p>Estratégia de marca, identidade visual e posicionamento para gerar reconhecimento.</p>
+          <article class="servico">
+            <h3 class="servico__titulo">Branding</h3>
+            <p class="servico__descricao">Estratégia de marca, identidade visual e posicionamento para gerar reconhecimento.</p>
           </article>
-          <article class="servico-card">
-            <h3>UX/UI Design</h3>
-            <p>Experiências digitais intuitivas e interfaces alinhadas aos objetivos do negócio.</p>
+          <article class="servico">
+            <h3 class="servico__titulo">UX/UI Design</h3>
+            <p class="servico__descricao">Experiências digitais intuitivas e interfaces alinhadas aos objetivos do negócio.</p>
           </article>
         </div>
       </div>
@@ -100,19 +102,19 @@
 
     <section id="depoimentos" class="secao">
       <div class="container">
-        <h2>Depoimentos</h2>
+        <h2 class="secao__titulo">Depoimentos</h2>
         <div class="depoimentos">
           <blockquote class="depoimento">
-            "A equipe entendeu nossa visão e entregou um site impecável. Nossa taxa de conversão cresceu 35%."
-            <cite>- Marina Silva, CEO da NovaMídia</cite>
+            <p class="depoimento__texto">"A equipe entendeu nossa visão e entregou um site impecável. Nossa taxa de conversão cresceu 35%."</p>
+            <cite class="depoimento__autor">- Marina Silva, CEO da NovaMídia</cite>
           </blockquote>
           <blockquote class="depoimento">
-            "Profissionalismo e criatividade em cada detalhe. O branding ficou exatamente como imaginávamos."
-            <cite>- Carlos Almeida, Diretor da UrbanFit</cite>
+            <p class="depoimento__texto">"Profissionalismo e criatividade em cada detalhe. O branding ficou exatamente como imaginávamos."</p>
+            <cite class="depoimento__autor">- Carlos Almeida, Diretor da UrbanFit</cite>
           </blockquote>
           <blockquote class="depoimento">
-            "Atendimento excelente e resultados concretos. Recomendo para qualquer empresa que queira evoluir digitalmente."
-            <cite>- Juliana Rocha, Fundadora da BioStore</cite>
+            <p class="depoimento__texto">"Atendimento excelente e resultados concretos. Recomendo para qualquer empresa que queira evoluir digitalmente."</p>
+            <cite class="depoimento__autor">- Juliana Rocha, Fundadora da BioStore</cite>
           </blockquote>
         </div>
       </div>
@@ -121,21 +123,21 @@
     <section id="contato" class="secao secao--escura">
       <div class="container contato">
         <div class="contato__info">
-          <h2>Contato</h2>
-          <p><strong>Endereço:</strong> Av. das Inovações, 123 - São Paulo, SP</p>
-          <p><strong>Telefone:</strong> (11) 99999-9999</p>
-          <p><strong>E-mail:</strong> contato@agenciacriativaweb.com.br</p>
+          <h2 class="secao__titulo">Contato</h2>
+          <p class="contato__linha"><strong class="contato__rotulo">Endereço:</strong> Av. das Inovações, 123 - São Paulo, SP</p>
+          <p class="contato__linha"><strong class="contato__rotulo">Telefone:</strong> (11) 99999-9999</p>
+          <p class="contato__linha"><strong class="contato__rotulo">E-mail:</strong> contato@agenciacriativaweb.com.br</p>
         </div>
 
         <form class="formulario" action="#" method="post">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          <label class="formulario__label" for="nome">Nome</label>
+          <input class="formulario__campo" type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
+          <label class="formulario__label" for="email">E-mail</label>
+          <input class="formulario__campo" type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
 
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+          <label class="formulario__label" for="mensagem">Mensagem</label>
+          <textarea class="formulario__campo formulario__campo--textarea" id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
 
           <button type="submit" class="botao botao--claro">Enviar mensagem</button>
         </form>
@@ -145,7 +147,7 @@
 
   <footer class="rodape">
     <div class="container">
-      <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+      <p class="rodape__texto">&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
     </div>
   </footer>
 </body>
