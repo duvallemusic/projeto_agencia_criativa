@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agência Criativa Web - Design digital, branding e desenvolvimento web com foco em resultados.">
+  <title>Agência Criativa Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="logo" href="#home" aria-label="Página inicial da Agência Criativa Web">
+        <span class="logo__marca">ACW</span>
+        <span class="logo__texto">Agência Criativa Web</span>
+      </a>
+
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Abrir menu de navegação">
+      <label class="menu-botao" for="menu-toggle" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navegacao" aria-label="Menu principal">
+        <ul class="navegacao__lista">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="banner">
+      <div class="container banner__conteudo">
+        <p class="tag">Design digital com estratégia</p>
+        <h1>Transformamos ideias em experiências digitais memoráveis.</h1>
+        <p class="banner__texto">
+          Na Agência Criativa Web, unimos criatividade, tecnologia e foco em resultado para impulsionar marcas no ambiente online.
+        </p>
+        <a class="botao" href="#contato">Solicitar proposta</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao">
+      <div class="container sobre">
+        <div>
+          <h2>Sobre Nós</h2>
+          <p>
+            Somos uma agência de design digital especializada em criar soluções visuais e funcionais para empresas que desejam se destacar.
+          </p>
+          <p>
+            Valorizamos inovação, colaboração, transparência e excelência em cada projeto, do conceito à entrega.
+          </p>
+        </div>
+        <picture class="sobre__imagem">
+          <source
+            srcset="
+              https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=480&q=80 480w,
+              https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80 800w,
+              https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80 1200w"
+            sizes="(max-width: 56.25rem) 100vw, 40vw">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+            alt="Equipe de design em reunião criativa">
+        </picture>
+      </div>
+    </section>
+
+    <section id="servicos" class="secao secao--cinza">
+      <div class="container">
+        <h2>Serviços</h2>
+        <div class="servicos-grid">
+          <article class="servico-card">
+            <h3>Design Gráfico</h3>
+            <p>Criação de peças visuais impactantes para mídias digitais e impressas.</p>
+          </article>
+          <article class="servico-card">
+            <h3>Desenvolvimento Web</h3>
+            <p>Sites modernos, rápidos e responsivos com foco em performance e conversão.</p>
+          </article>
+          <article class="servico-card">
+            <h3>Branding</h3>
+            <p>Estratégia de marca, identidade visual e posicionamento para gerar reconhecimento.</p>
+          </article>
+          <article class="servico-card">
+            <h3>UX/UI Design</h3>
+            <p>Experiências digitais intuitivas e interfaces alinhadas aos objetivos do negócio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="secao">
+      <div class="container">
+        <h2>Depoimentos</h2>
+        <div class="depoimentos">
+          <blockquote class="depoimento">
+            "A equipe entendeu nossa visão e entregou um site impecável. Nossa taxa de conversão cresceu 35%."
+            <cite>- Marina Silva, CEO da NovaMídia</cite>
+          </blockquote>
+          <blockquote class="depoimento">
+            "Profissionalismo e criatividade em cada detalhe. O branding ficou exatamente como imaginávamos."
+            <cite>- Carlos Almeida, Diretor da UrbanFit</cite>
+          </blockquote>
+          <blockquote class="depoimento">
+            "Atendimento excelente e resultados concretos. Recomendo para qualquer empresa que queira evoluir digitalmente."
+            <cite>- Juliana Rocha, Fundadora da BioStore</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao secao--escura">
+      <div class="container contato">
+        <div class="contato__info">
+          <h2>Contato</h2>
+          <p><strong>Endereço:</strong> Av. das Inovações, 123 - São Paulo, SP</p>
+          <p><strong>Telefone:</strong> (11) 99999-9999</p>
+          <p><strong>E-mail:</strong> contato@agenciacriativaweb.com.br</p>
+        </div>
+
+        <form class="formulario" action="#" method="post">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+
+          <button type="submit" class="botao botao--claro">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
