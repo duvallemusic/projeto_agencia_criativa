@@ -1,0 +1,28 @@
+@use "variaveis" as v;
+
+// Aplica padding vertical de forma padronizada.
+@mixin espacamento-vertical($top, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+// Define aparência base de botões reutilizáveis.
+@mixin botao-base($cor-inicial, $cor-final, $texto: v.$cor-texto-claro) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: v.$radius-md;
+  padding: 0.9em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $texto;
+  background: linear-gradient(135deg, $cor-inicial, $cor-final);
+  box-shadow: v.$sombra;
+  transition: transform 150ms ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-0.1rem);
+  }
+}

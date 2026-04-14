@@ -1,0 +1,12 @@
+{
+  "name": "agencia-criativa-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/estilos.scss css/estilos.css --no-source-map",
+    "watch:css": "sass --watch scss/estilos.scss:css/estilos.css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

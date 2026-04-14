@@ -1,0 +1,33 @@
+// Tipografia
+$fonte-base: "Inter", sans-serif;
+
+// Paleta principal
+$cor-fundo: #0b1020;
+$cor-primaria: #4f7cff;
+$cor-secundaria: #6be5c2;
+$cor-texto: #1d2433;
+$cor-texto-claro: #f5f8ff;
+$cor-superficie: #ffffff;
+$cor-superficie-suave: #f3f6fb;
+$cor-link-hover: #1537aa;
+$cor-texto-muted: #334677;
+$cor-rodape-fundo: #050914;
+
+// Sombras
+$sombra: 0 0.625rem 2.5rem rgb(11 16 32 / 0.1);
+$sombra-suave: 0 0.4rem 1rem rgb(11 16 32 / 0.05);
+
+// Bordas
+$radius-pill: 999px;
+$radius-md: 0.8rem;
+
+// Escala de espaçamento
+$espacamento-1: 0.5rem;
+$espacamento-2: 1rem;
+$espacamento-3: 1.5rem;
+$espacamento-4: 2rem;
+$espacamento-5: 3rem;
+
+// Tokens de layout
+$container-max: 75rem;
+$transicao-padrao: 200ms ease;
